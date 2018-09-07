@@ -3,13 +3,11 @@ import Crypto
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
-    // Basic "Hello, world!" example
-    router.get("hello") { req in
-        return "Hello, world!"
-    }
-
+    print("controllers")
     let userController = UserController()
     let gameController = GameController()
+
+    print("routes")
 
     router.get("users", use: userController.index)
     router.post("register", use: userController.register)

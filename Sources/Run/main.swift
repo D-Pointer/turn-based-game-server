@@ -1,3 +1,11 @@
-import App
+//import App
 
-try app(.detect()).run()
+do {
+    print("Server starting...")
+
+    try app(.detect()).run()
+    print("Server done")
+}
+catch {
+    print("Unexpected error: \(error).")
+}
